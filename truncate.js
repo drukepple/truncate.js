@@ -413,7 +413,7 @@
       }
 
       if (this.options.maxHeight === undefined) {
-        this.options.maxHeight = parseInt(this.options.lines, 10) * parseInt(this.options.lineHeight, 10);
+        this.options.maxHeight = parseInt(this.options.lines, 10) * parseFloat(this.options.lineHeight, 10);
       }
 
       if (this.options.position !== 'start' && this.options.position !== 'middle' && this.options.position !== 'end') {
@@ -514,7 +514,7 @@
      */
     collapse: function (retruncate) {
       this.isExplicitlyCollapsed = true;
-      
+
       if (this.isCollapsed) {
         return;
       }
